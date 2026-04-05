@@ -1,32 +1,44 @@
-<!-- Rastgele Yönlendirme Butonu -->
-<div style="text-align: center; margin: 50px 0;">
-    <button onclick="rastgeleGit()" 
-            style="background: linear-gradient(135deg, #2e7d32, #43a047); 
+<!-- Rastgele Siteye Git Butonu -->
+<div style="text-align: center; margin: 60px 0 40px;">
+    <button onclick="rastgeleSiteyeGit()" 
+            style="background: linear-gradient(135deg, #d32f2f, #f44336); 
                    color: white; 
-                   padding: 18px 40px; 
-                   font-size: 18px; 
-                   font-weight: 600; 
+                   padding: 18px 45px; 
+                   font-size: 19px; 
+                   font-weight: 700; 
                    border: none; 
                    border-radius: 50px; 
                    cursor: pointer; 
-                   box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);">
-        🎲 Şansını Dene
+                   box-shadow: 0 10px 25px rgba(211, 47, 47, 0.4);">
+        🌍 Rastgele Siteye Git
     </button>
 </div>
 
 <script>
-// Rastgele yönlendirme yapacağı sayfalar (buraya istediğin linkleri ekleyebilirsin)
-const sayfalar = [
-    "https://eymentalhagulden-sudo.github.io/pamuk/",           // Ana sayfa
-    "https://eymentalhagulden-sudo.github.io/pamuk/#ucd",      // 3D Modeller (isteğe göre id ekleyebilirsin)
-    "https://eymentalhagulden-sudo.github.io/pamuk/#iletisim", // İletişim
-    "https://www.meshy.ai/s/RgfiRi",                           // 3D Model linki
-    "https://www.youtube.com/results?search_query=pamuk+hasat+robotu", // Dış link örnek
-    "https://google.com/search?q=pamuk+tarım+robotları"
+// Rastgele popüler siteler listesi (istediğin kadar ekleyebilirsin)
+const randomSiteler = [
+    "https://www.google.com",
+    "https://www.youtube.com",
+    "https://www.wikipedia.org",
+    "https://www.reddit.com",
+    "https://www.instagram.com",
+    "https://www.twitter.com",
+    "https://www.tiktok.com",
+    "https://www.amazon.com",
+    "https://www.netflix.com",
+    "https://www.github.com",
+    "https://www.bbc.com",
+    "https://www.cnn.com",
+    "https://www.imdb.com",
+    "https://www.spotify.com",
+    "https://www.pinterest.com"
 ];
 
-function rastgeleGit() {
-    const rastgele = Math.floor(Math.random() * sayfalar.length);
-    window.location.href = sayfalar[rastgele];
+function rastgeleSiteyeGit() {
+    const rastgeleIndex = Math.floor(Math.random() * randomSiteler.length);
+    const secilenSite = randomSiteler[rastgeleIndex];
+    
+    // Yeni sekmede açsın
+    window.open(secilenSite, "_blank");
 }
 </script>
