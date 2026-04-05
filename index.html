@@ -1,0 +1,32 @@
+<!-- Rastgele Yönlendirme Butonu -->
+<div style="text-align: center; margin: 50px 0;">
+    <button onclick="rastgeleGit()" 
+            style="background: linear-gradient(135deg, #2e7d32, #43a047); 
+                   color: white; 
+                   padding: 18px 40px; 
+                   font-size: 18px; 
+                   font-weight: 600; 
+                   border: none; 
+                   border-radius: 50px; 
+                   cursor: pointer; 
+                   box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);">
+        🎲 Şansını Dene
+    </button>
+</div>
+
+<script>
+// Rastgele yönlendirme yapacağı sayfalar (buraya istediğin linkleri ekleyebilirsin)
+const sayfalar = [
+    "https://eymentalhagulden-sudo.github.io/pamuk/",           // Ana sayfa
+    "https://eymentalhagulden-sudo.github.io/pamuk/#ucd",      // 3D Modeller (isteğe göre id ekleyebilirsin)
+    "https://eymentalhagulden-sudo.github.io/pamuk/#iletisim", // İletişim
+    "https://www.meshy.ai/s/RgfiRi",                           // 3D Model linki
+    "https://www.youtube.com/results?search_query=pamuk+hasat+robotu", // Dış link örnek
+    "https://google.com/search?q=pamuk+tarım+robotları"
+];
+
+function rastgeleGit() {
+    const rastgele = Math.floor(Math.random() * sayfalar.length);
+    window.location.href = sayfalar[rastgele];
+}
+</script>
